@@ -1,0 +1,1 @@
+{"version":3,"file":"xml.options.js","sourceRoot":"","sources":["../../src/middleware/xml.options.ts"],"names":[],"mappings":";;;AAAA,MAAa,UAAU;IAKnB,YAAY,iBAA0B,EAAE,eAAwB,EAAE,kBAA2C;QAEzG,IAAI,CAAC,iBAAiB,GAAG,iBAAiB,CAAC;QAC3C,IAAI,CAAC,eAAe,GAAG,eAAe,CAAC;QACvC,IAAI,CAAC,kBAAkB,GAAG,kBAAkB,CAAC;IACjD,CAAC;CACJ;AAXD,gCAWC"}
