@@ -2,6 +2,7 @@ import { OpenApiValidatorOpts } from 'express-openapi-validator/dist/framework/t
 import { LoggingOptions } from './logging.options'
 import { SwaggerUiOptions } from './swagger.ui.options';
 import { XmlOptions } from './xml.options';
+import * as express from 'express';
 
 export class Oas3AppOptions {
     public routing: any;
@@ -9,8 +10,10 @@ export class Oas3AppOptions {
     public logging: LoggingOptions;
     public swaggerUI: SwaggerUiOptions;
     public xml: XmlOptions;
+    public app: express.Application;
+    public cors: any;
 
-    constructor(routingOpts: any, openApiValidatorOpts: OpenApiValidatorOpts, logging: LoggingOptions, swaggerUI: SwaggerUiOptions, xml: XmlOptions) {
+    constructor(routingOpts: any, openApiValidatorOpts: OpenApiValidatorOpts, logging: LoggingOptions, swaggerUI: SwaggerUiOptions, xml: XmlOptions, app: express.Application, cors: any) {
         this.routing = routingOpts;
         this.openApiValidator = openApiValidatorOpts;
         this.swaggerUI = swaggerUI;
@@ -20,5 +23,7 @@ export class Oas3AppOptions {
         if (!xml)
             xml = new XmlOptions(null, null, null);
         this.xml = xml;
+        this.app = app;
+        this.cors = cors;
     }
 }
