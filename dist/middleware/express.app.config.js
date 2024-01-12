@@ -26,7 +26,7 @@ class ExpressAppConfig {
         const swaggerDoc = jsyaml.safeLoad(spec);
         this.app.use(bodyParser.urlencoded());
         this.app.use(bodyParser.text());
-        this.app.use(bodyParser.json());
+        this.app.use(bodyParser.json({ limit: '25mb' }));
         this.app.use(bodyParser.raw({ type: 'application/pdf' }));
         this.app.use(this.configureXmlParser(appOptions));
         this.app.use(this.configureXmlSanitiser(appOptions));
